@@ -2,21 +2,8 @@ import HeaderUI from './assets/components/HeaderUI.tsx';
 import AlertUI from './assets/components/AlertUI.tsx';
 import './App.css';
 import { Grid } from '@mui/material';
-import Alert, { type AlertColor } from '@mui/material/Alert';
+import SelectorUI from './assets/components/SelectorUI';
 
-type AlertVariant = 'standard' | 'outlined' | 'filled';
-
-interface AlertConfig {
-    description: string;
-    severity?: AlertColor;
-    variant?: AlertVariant;
-}
-
-export default function AlertUI({ description, severity = 'success', variant = 'outlined' }: AlertConfig) {
-    return (
-        <Alert variant={variant} severity={severity}>{description}</Alert>
-    );
-}
 
 function App() {
     return (
@@ -36,7 +23,9 @@ function App() {
             </Grid>
 
             {/* Selector */}
-            <Grid size={{ xs: 12, md: 3 }}>Elemento: Selector</Grid>
+            <Grid size={{ xs: 12, md: 3 }}>
+                <SelectorUI />
+            </Grid>
 
             {/* Indicadores */}
             <Grid size={{ xs: 12, md: 9 }}>Elemento: Indicadores</Grid>
