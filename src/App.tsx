@@ -1,6 +1,8 @@
 import HeaderUI from './components/HeaderUI.tsx';
 import AlertUI from './components/AlertUI.tsx';
 import IndicatorUI from './components/IndicatorUI.tsx';
+import TableUI from './components/TableUI';
+import ChartUI from './components/ChartUI';
 import './App.css';
 import useFetchData from './hooks/useFetchData';
 import { Grid } from '@mui/material';
@@ -71,12 +73,12 @@ function App() {
 
             {/* Gráfico */}
             <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
-                Elemento: Gráfico
+                <ChartUI />
             </Grid>
 
             {/* Tabla */}
             <Grid size={{ xs: 12, md: 6 }} sx={{ display: { xs: 'none', md: 'block' } }}>
-                Elemento: Tabla
+                <TableUI />
             </Grid>
 
             {/* Información adicional */}
